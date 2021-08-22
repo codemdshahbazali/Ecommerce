@@ -4,37 +4,6 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
-//Pages
-const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
-};
-
-const About = () => {
-  return (
-    <div>
-      <h1>About</h1>
-    </div>
-  );
-};
-const Blog = () => {
-  return (
-    <div>
-      <h1>Blog</h1>
-    </div>
-  );
-};
-const Contact = () => {
-  return (
-    <div>
-      <h1>Contact Us</h1>
-    </div>
-  );
-};
-
 function Navbar() {
   const [click, setClick] = useState(false);
 
@@ -60,7 +29,7 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/about'
+                to='/electronics'
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>
@@ -70,7 +39,7 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/blog'
+                to='/menswear'
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>
@@ -80,7 +49,7 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/contact'
+                to='/womenswear'
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>
@@ -90,16 +59,13 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/contact'
+                to='/jewellery'
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>
                 Jewellery
               </NavLink>
             </li>
-            {/* <li style={{ fontSize: '35px' }}>
-              <i class='fas fa-user-circle'></i>
-            </li> */}
             <li className='nav-item' style={{ fontSize: '30px' }}>
               <NavLink
                 exact

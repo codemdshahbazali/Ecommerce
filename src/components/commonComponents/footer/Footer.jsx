@@ -54,22 +54,22 @@ const Footer = () => {
                   <h3 className='f-title f_600 t_color f_size_18'>Download</h3>
                   <ul className='list-unstyled f_list'>
                     <li>
-                      <a href='#'>Company</a>
+                      <a href='/'>Company</a>
                     </li>
                     <li>
-                      <a href='#'>Android App</a>
+                      <a href='/'>Android App</a>
                     </li>
                     <li>
-                      <a href='#'>ios App</a>
+                      <a href='/'>ios App</a>
                     </li>
                     <li>
-                      <a href='#'>Desktop</a>
+                      <a href='/'>Desktop</a>
                     </li>
                     <li>
-                      <a href='#'>Projects</a>
+                      <a href='/'>Projects</a>
                     </li>
                     <li>
-                      <a href='#'>My tasks</a>
+                      <a href='/'>My tasks</a>
                     </li>
                   </ul>
                 </div>
@@ -86,22 +86,22 @@ const Footer = () => {
                   <h3 className='f-title f_600 t_color f_size_18'>Help</h3>
                   <ul className='list-unstyled f_list'>
                     <li>
-                      <a href='#'>FAQ</a>
+                      <a href='/'>FAQ</a>
                     </li>
                     <li>
-                      <a href='#'>Term &amp; conditions</a>
+                      <a href='/'>Term &amp; conditions</a>
                     </li>
                     <li>
-                      <a href='#'>Reporting</a>
+                      <a href='/'>Reporting</a>
                     </li>
                     <li>
-                      <a href='#'>Documentation</a>
+                      <a href='/'>Documentation</a>
                     </li>
                     <li>
-                      <a href='#'>Support Policy</a>
+                      <a href='/'>Support Policy</a>
                     </li>
                     <li>
-                      <a href='#'>Privacy</a>
+                      <a href='/'>Privacy</a>
                     </li>
                   </ul>
                 </div>
@@ -119,10 +119,10 @@ const Footer = () => {
                     Team Solutions
                   </h3>
                   <div className='f_social_icon'>
-                    <a href='#' className='fab fa-facebook'></a>
-                    <a href='#' className='fab fa-twitter'></a>
-                    <a href='#' className='fab fa-linkedin'></a>
-                    <a href='#' className='fab fa-pinterest'></a>
+                    <a href='/' className='fab fa-facebook'></a>
+                    <a href='/' className='fab fa-twitter'></a>
+                    <a href='/' className='fab fa-linkedin'></a>
+                    <a href='/' className='fab fa-pinterest'></a>
                   </div>
                 </div>
               </div>
