@@ -5,6 +5,8 @@ import { getEcommerceData } from './../../services/ecommerceDataService';
 import Crousel from './crousel/Crousel';
 import Category from './category/Category';
 import CategoryOverview from './categoryOverview/CategoryOverview';
+import Testimonials from './testimonial/testimonial/Testimmonials';
+// import Testimonials from './testimonials/testimmonials';
 
 function EcommerceLandingPage() {
   const [categories, setCategories] = useState(null);
@@ -51,6 +53,7 @@ function EcommerceLandingPage() {
             {productCategory.toUpperCase()}
           </h2>
           <CategoryOverview />
+          <Testimonials />
         </>
       )}
     </div>

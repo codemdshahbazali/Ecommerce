@@ -12,7 +12,7 @@ function Product({ data }) {
       <div
         className='product-card-img'
         onClick={() => {
-          history.push(`/${data.id}`);
+          history.push(`/productDetails/${data.id}`);
         }}>
         <img src={data.image} alt={data.title} />
       </div>

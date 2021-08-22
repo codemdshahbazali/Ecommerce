@@ -10,6 +10,8 @@ function ProductDetails() {
   const dispatch = useDispatch();
   const { id } = useParams();
 
+  console.log('id', id);
+
   useEffect(() => dispatch(getProductData({ id })), [dispatch, id]);
 
   const { loading, individualProduct, errorMessage } = useSelector(

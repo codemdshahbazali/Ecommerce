@@ -1,0 +1,106 @@
+.testimonial-container {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 40px 0;
+}
+.h2 {
+  color: rgb(95, 91, 91);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  position: relative;
+  margin: 30px 0 60px;
+}
+.h2::after {
+  content: '';
+  width: 140px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #cfafac;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  opacity: 0.8;
+}
+.col-center {
+  margin: 0 auto;
+  float: none !important;
+}
+.testi .carousel {
+  margin: 50px auto;
+  padding: 0 70px;
+  background-image: linear-gradient(
+    130deg,
+    #f0ecbf 0%,
+    #b670bc 50%,
+    #c0cf7c 75%
+  );
+}
+.testi .carousel-item {
+  color: rgb(14, 11, 11);
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  max-height: 320px;
+  padding: 20px;
+}
+.testi .carousel .item .img-box {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.testi .carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.testi .carousel .testimonial {
+  padding: 30px 0 10px;
+}
+.testi .carousel .overview {
+  font-style: italic;
+}
+.testi .carousel .overview b {
+  text-transform: uppercase;
+  color: #db584e;
+}
+.testi .carousel .carousel-control {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  top: 50%;
+  background: none;
+}
+.testi .carousel-control i {
+  font-size: 68px;
+  line-height: 42px;
+  position: absolute;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.testi .carousel .carousel-indicators {
+  bottom: -40px;
+}
+.testi .carousel-indicators li,
+.carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+}
+.testi .carousel-indicators li {
+  background: rgb(228, 183, 183);
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.testi .carousel-indicators li.active {
+  background: rgb(221, 182, 182);
+  box-shadow: inset 0 2px 1px rgba(5, 209, 236, 0.2);
+}

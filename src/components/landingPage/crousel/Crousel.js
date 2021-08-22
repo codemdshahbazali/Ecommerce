@@ -1,8 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import './Crousel.css';
 
 function Crousel() {
+  const history = useHistory();
   return (
     <Carousel>
       <Carousel.Item interval={4000}>
@@ -17,7 +19,11 @@ function Crousel() {
             The one stop electronic online store for Premium lifestyle gadgets
             from across the globe.
           </p>
-          <button className='btn btn-danger'>Explore More</button>
+          <button
+            className='btn btn-danger'
+            onClick={() => history.push('/category/electronics')}>
+            Explore More
+          </button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={4000}>
@@ -32,7 +38,11 @@ function Crousel() {
             Choose from a variety of clothing for men online in India at best
             rates.
           </p>
-          <button className='btn btn-danger'>Explore More</button>
+          <button
+            className='btn btn-danger'
+            onClick={() => history.push("/category/men's clothing")}>
+            Explore More
+          </button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={4000}>
@@ -47,7 +57,11 @@ function Crousel() {
             Choose from a variety of clothing for women online in India at best
             rates.
           </p>
-          <button className='btn btn-danger'>Explore More</button>
+          <button
+            className='btn btn-danger'
+            onClick={() => history.push("/category/women's clothing")}>
+            Explore More
+          </button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={4000}>
@@ -63,7 +77,11 @@ function Crousel() {
             Earrings, Pendants, Bangles, Bracelets, Necklaces. Assured Purity,
             Free Shipping.
           </p>
-          <button className='btn btn-danger'>Explore More</button>
+          <button
+            className='btn btn-danger'
+            onClick={() => history.push('/category/jewelery')}>
+            Explore More
+          </button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

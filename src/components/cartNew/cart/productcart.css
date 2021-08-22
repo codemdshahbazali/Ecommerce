@@ -1,0 +1,40 @@
+.r-productcart-mainDiv {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* color: rgb(55, 171, 138); */
+}
+
+.cart-detail {
+  margin: 1vh;
+}
+.subtotal {
+  position: fixed;
+  bottom: 10vh;
+  right: 40vw;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 1.4px;
+  word-spacing: 2px;
+  font-weight: 300;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+.productlisting {
+  width: 60vw;
+  height: 70vh;
+  overflow: scroll;
+  margin-top: 1rem;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.productlisting::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 857) {
+  .r-productcart-mainDiv {
+    font-size: 50%;
+  }
+}

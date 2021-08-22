@@ -29,7 +29,7 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/electronics'
+                to='/category/electronics'
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>
@@ -39,7 +39,7 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/menswear'
+                to="/category/men's clothing"
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>
@@ -49,7 +49,7 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/womenswear'
+                to="/category/women's clothing"
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>
@@ -59,7 +59,7 @@ function Navbar() {
             <li className='nav-item'>
               <NavLink
                 exact
-                to='/jewellery'
+                to='/category/jewelery'
                 activeClassName='active'
                 className='nav-links'
                 onClick={click ? handleClick : null}>

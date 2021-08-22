@@ -1,0 +1,81 @@
+.cart-detail-main-div {
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  color: rgb(55, 171, 138);
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+.cart-detail-heading {
+  font-size: 9rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.cart-detail-heading {
+  font-size: 1rem;
+}
+.cart-detail-address {
+  width: 28vw;
+  height: auto;
+  border: 1px solid black;
+  margin: 1rem 1rem;
+  border-radius: 5%;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+.cart-detail-address::-webkit-scrollbar {
+  display: none;
+}
+
+.cart-detail-payment-method {
+  width: 28vw;
+  height: 30vh;
+  border: 1px solid black;
+  margin: 1rem;
+  border-radius: 5%;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+.cart-detail-payment-method::-webkit-scrollbar {
+  display: none;
+}
+.cart-detail-button {
+  position: relative;
+  bottom: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+.subtotal-detail {
+  position: relative;
+  bottom: 20px;
+}
+.date-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card-number {
+  width: 100%;
+}
+.card-owner {
+  width: 100%;
+}
+.month {
+  width: 45%;
+}
+.year {
+  width: 45%;
+}
+.cvv-input {
+  width: 100%;
+}
