@@ -1,0 +1,11 @@
+.category-overview-container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 80%;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}

@@ -1,15 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { addToCart } from '../../redux/slices/CartSlice';
 
 function Product({ data }) {
   const history = useHistory();
+  const dispatch = useDispatch();
+
   return (
-    <div
-      className='product-card'
-      onClick={() => {
-        history.push(`/${data.id}`);
-      }}>
-      <div className='product-card-img'>
+    <div className='product-card'>
+      <div
+        className='product-card-img'
+        onClick={() => {
+          history.push(`/${data.id}`);
+        }}>
         <img src={data.image} alt={data.title} />
       </div>
       <div className='product-card-info'>
@@ -24,6 +28,17 @@ function Product({ data }) {
           <span>Price: ₹ </span>
           {data.price}
         </p>
+        <button
+          className='btn  btn-light text-center'
+          onClick={() => {
+            const productObj = {
+              ...data,
+              productQuantity: 1,
+            };
+            dispatch(addToCart(productObj));
+          }}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

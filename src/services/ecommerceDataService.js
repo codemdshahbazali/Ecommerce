@@ -28,3 +28,21 @@ export const getProductData = createAsyncThunk(
     }
   }
 );
+
+export const getProductCategoryData = createAsyncThunk(
+  'allProductsCategory/getProductCategoryData',
+  async (dataObject) => {
+    try {
+      const response = await fetch(
+        `https://fakestoreapi.com/products/category/${dataObject.category}`
+      );
+      const data = await response.json();
+      return {
+        data,
+        category: dataObject.category,
+      };
+    } catch (e) {
+      throw new Error(e.message);
+    }
+  }
+);

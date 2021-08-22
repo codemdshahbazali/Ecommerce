@@ -1,0 +1,29 @@
+.honmepage--category {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 80%;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 30px;
+}
+
+.category-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  max-width: 20rem;
+  max-height: 20rem;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.category-item-container > img {
+  border-radius: 15px;
+  margin-bottom: 5px;
+  max-height: 13rem;
+  /* max-width: 90%; */
+  width: 100%;
+  object-fit: cover;
+}

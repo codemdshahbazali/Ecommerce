@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 function ProductCart() {
   const cartData = useSelector((state) => state.cartData);
   return (
-    <div>
+    <div style={{ position: 'relative', top: '70px' }}>
       <div className='container-fluid mt-4'>
         <div className='row'>
           <div className='col-1'></div>

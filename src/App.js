@@ -6,15 +6,19 @@ import EommerceHeader from './components/EommerceHeader';
 import ProductCart from './components/cart/ProductCart';
 import ProductDetails from './components/ProductDetails';
 import store from './redux/store';
+import Navbar from './components/commonComponents/header/Navbar';
+import Footer from './components/commonComponents/footer/Footer';
 
 function App() {
   return (
     <div className='App'>
       <Provider store={store}>
-        <EommerceHeader />
+        {/* <EommerceHeader /> */}
+        <Navbar />
         <Switch>
           <Route exact path='/'>
             <EcommerceLandingPage />
+            <Footer />
           </Route>
           <Route exact path='/cart'>
             <ProductCart />

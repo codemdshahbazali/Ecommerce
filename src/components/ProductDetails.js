@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getProductData } from './../services/ecommerceDataService';
-
 import { addToCart } from './../redux/slices/CartSlice';
 import { useState } from 'react';
 
@@ -22,7 +21,9 @@ function ProductDetails() {
   const [productCount, setProductCount] = useState(1);
 
   return (
-    <div className='container-fluid mt-4'>
+    <div
+      className='container-fluid mt-4'
+      style={{ position: 'relative', top: '70px' }}>
       {loading ? (
         <div className='d-flex justify-content-center'>
           <div className='spinner-border' role='status'>
