@@ -2,25 +2,23 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
 import CartDetail from './cart-detail/CartDetail';
-import './productcart.css';
+import "./productcart.css"
 
 function ProductCart() {
   const cartData = useSelector((state) => state.cartData);
   return (
-    <div
-      className='r-productcart-mainDiv'
-      style={{ position: 'relative', top: '70px' }}>
+    <div className="r-productcart-mainDiv">
       <div className=''>
         <div className=''>
           <div className=''></div>
-          <div className='productlisting'>
+          <div className="productlisting">
             {cartData
               .map((data, index) => {
                 return <CartItem data={data} key={index} />;
               })
               .reverse()}
           </div>
-          <div className='subtotal'>
+          <div className="subtotal">
             <span>Subtotal: ({cartData.length} items): ₹ </span>
             <span>
               {cartData
@@ -34,11 +32,10 @@ function ProductCart() {
                 .toFixed(2)}
             </span>
           </div>
+
         </div>
       </div>
-      <div className='cart-detail'>
-        <CartDetail />
-      </div>
+      <div className="cart-detail"><CartDetail/></div>
     </div>
   );
 }

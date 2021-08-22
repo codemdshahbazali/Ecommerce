@@ -8,9 +8,10 @@ const CartDetail = () => {
   // const cartData = useSelector((state) => state.cartData);
   return (
     <div className='cart-detail-main-div'>
-      <div className='cart-detail-heading'>CART DETAIL</div>
+      <div className='cart-detail-heading '>CART DETAIL</div>
       <div className='cart-detail-address'>
-        <h3>address detail </h3>
+        <h3 className='title'>ADDRESS DETAIL </h3>
+        <hr />
         <div className='overflow-manage'>
           <div class='form-group'>
             <input
@@ -53,20 +54,28 @@ const CartDetail = () => {
       <div className='cart-detail-payment-method'>
         <form class='credit-card'>
           <div class='form-header'>
-            <h4 class='title'>Credit card detail</h4>
+            <h4 class='title'>PAYMENT DETAIL</h4>
+            <hr />
           </div>
 
           <div class='form-body'>
             {/* <!-- Card Number --> */}
             <input
               type='integer'
-              class='card-number'
+              class='card-number payment-styling'
               placeholder='Card Number'
             />
-            <input type='text' class='card-owner' placeholder='Card Owner' />
+            <input
+              type='text'
+              class='card-owner payment-styling'
+              placeholder='Card Owner'
+            />
             {/* <!-- Date Field --> */}
             <div class='date-field'>
-              <div class='month'>
+              <div style={{ position: 'relative', top: '4px', color: 'black' }}>
+                expdata:{' '}
+              </div>
+              <div class='month payment-styling'>
                 <select name='Month'>
                   <option value='january'>January</option>
                   <option value='february'>February</option>
@@ -82,7 +91,7 @@ const CartDetail = () => {
                   <option value='december'>December</option>
                 </select>
               </div>
-              <div class='year'>
+              <div class='year payment-styling'>
                 <select name='Year'>
                   <option value='2016'>2016</option>
                   <option value='2017'>2017</option>
@@ -100,7 +109,11 @@ const CartDetail = () => {
             {/* <!-- Card Verification Field --> */}
             <div class='card-verification'>
               <div class='cvv-input'>
-                <input type='text' placeholder='CVV' />
+                <input
+                  class='cvv-input payment-styling'
+                  type='text'
+                  placeholder='CVV'
+                />
               </div>
             </div>
           </div>

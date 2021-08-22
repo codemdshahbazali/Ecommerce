@@ -22,10 +22,10 @@ function CartItem({ data }) {
       </button>
 
       <div className='row'>
-        <div className='col-4 product-cart-img'>
+        <div className='col-4 product-cart-img '>
           <img src={data.image} alt={data.title} />
         </div>
-        <div className='col-1'></div>
+        <div className='col-2'></div>
         <div className='col-6 product-cart-info'>
           <p className='product-cart-info-title'>{data.title}</p>
           <p
@@ -41,17 +41,17 @@ function CartItem({ data }) {
           </p>
           <div className='product-quantity mb-2'>
             <button
-              className='btn btn-outline-secondary fs-5 ps-3 pe-3'
+              className='btn btn-outline-secondary  ps-3 r-btn'
               onClick={() => {
                 setProductQuant((prevData) => prevData - 1);
               }}>
               ◀
             </button>
-            <button className='btn btn-outline-secondary fs-5 ps-4 pe-4 m-1'>
+            <button className='btn btn-outline-secondary  ps-3  m-1'>
               {productQuant > 0 ? productQuant : setProductQuant(1)}
             </button>
             <button
-              className='btn btn-outline-secondary fs-5 ps-3 pe-3'
+              className='btn btn-outline-secondary ps-3 mb  r-btn'
               onClick={() => {
                 setProductQuant((prevData) => prevData + 1);
               }}>

@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|IBM+Plex+Sans:500&display=swap');
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+:root {
+  /* --color-primary: #6B7A8F;
+  --color-secondary: #101118;
+  --color-accent: #1D1F2F;
+  --color-focus: #6D64F7; */
+  --base-duration: 600ms;
+  --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+
+.SPP_App {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: 'Playfair Display', serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.SPP_icon {
+  fill: var(--color-primary);
+  width: 100%;
+}
+
+.SPP_btn {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 0.125rem;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1rem 2.5rem 1.125rem;
+}
+
+.SPP_btn:focus {
+  outline-color: var(--color-focus);
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 3px;
+}
+
+.SPP_btn:active {
+  transform: translateY(1px);
+}
+
+.SPP_slider__controls {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 8rem;
+  left: 30%;
+  width: 100%;
+}
+
+.SPP_slider__controls .SPP_btn {
+  --size: 3rem;
+  align-items: center;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  display: flex;
+  height: var(--size);
+  padding: 0;
+  width: var(--size);
+}
+
+.SPP_slider__controls .SPP_btn:focus {
+  border-color: var(--color-focus);
+  outline: none;
+}
+
+.SPP_slider__controls .SPP_btn--previous > * {
+  transform: rotate(180deg);
+}
+
+.SPP_btn--previous {
+  position: absolute;
+  left: -100px;
+}
+
+.SPP_btn--next {
+  position: absolute;
+  right: 200px;
+}
+
+.SPP_slider {
+  --slide-size: 70vmin;
+  --slide-margin: 4vmin;
+  height: var(--slide-size);
+  height: 345px;
+  margin: 27px auto 0;
+  position: relative;
+  left: -10px;
+  width: var(--slide-size);
+}
+
+.SPP_slider__wrapper {
+  display: flex;
+  margin: 0 calc(var(--slide-margin) * -1);
+  position: absolute;
+  left: 79.5px;
+  transition: transform var(--base-duration) cubic-bezier(0.25, 1, 0.35, 1);
+  margin-bottom: 50px;
+}
+
+.SPP_slide {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: var(--slide-size);
+  justify-content: center;
+  margin: 0 var(--slide-margin);
+  opacity: 0.25;
+  position: relative;
+  text-align: center;
+  transition: opacity calc(var(--base-duration) / 2) var(--base-ease),
+    transform calc(var(--base-duration) / 2) var(--base-ease);
+  width: var(--slide-size);
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+.SPP_slide--previous:hover,
+.SPP_slide--next:hover {
+  opacity: 0.5;
+  -webkit-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+}
+
+.SPP_slide--previous {
+  cursor: pointer;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.SPP_SPP_slide--previous:hover {
+  transform: translateX(2%);
+}
+
+.SPP_slide--next {
+  cursor: pointer;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.SPP_slide--next:hover {
+  transform: translateX(-2%);
+  -webkit-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+}
+
+.SPP_slide--current {
+  --x: 0;
+  --y: 0;
+  --d: 50;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.SPP_slide--current:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+@media (hover: hover) {
+  .slide--current:hover .SPP_slide__image-wrapper {
+    transform: scale(1.025)
+      translate(
+        calc(var(--x) / var(--d) * 1px),
+        calc(var(--y) / var(--d) * 1px)
+      );
+  }
+}
+
+.SPP_slide__image-wrapper {
+  background-color: var(--color-accent);
+  border-radius: 1%;
+  height: 100%;
+  left: 0%;
+  overflow: hidden;
+  position: absolute;
+  top: 0%;
+  transition: transform calc(var(--base-duration) / 4) var(--base-ease);
+  width: 100%;
+}
+
+.SPP_slide__image {
+  --d: 20;
+  height: 110%;
+  left: -5%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -5%;
+  transition: opacity var(--base-duration) var(--base-ease),
+    transform var(--base-duration) var(--base-ease);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 110%;
+}
+
+@media (hover: hover) {
+  .slide--current .SPP_slide__image {
+    transform: translate(
+      calc(var(--x) / var(--d) * 1px),
+      calc(var(--y) / var(--d) * 1px)
+    );
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.SPP_navbar {
+  height: 10vh;
+  background-color: rgb(32, 189, 144);
+}
+
+.SPP_details_container {
+  height: 40vh;
+  margin: auto 0;
+  padding-top: 2vh;
+  background-color: rgb(183, 233, 219);
+  display: border-box;
+}
+
+.SPP_temp {
+  height: 0;
+}
+
+.SPP_desc {
+  background-color: rgb(127, 216, 191);
+  height: 36vh;
+  margin: 2vh 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 1px rgb(133, 179, 166);
+}
+
+.SPP_sim_prod_cont {
+  height: 150vh;
+}
+
+.SPP_sim_prod_heading {
+  background-color: white;
+  padding: 20px 20px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: verdana;
+  font-size: 3em;
+  font-weight: 700;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px rgb(101, 174, 202), 1px 2px 1px rgb(101, 174, 202),
+    1px 3px 1px rgb(101, 174, 202), 1px 4px 1px rgb(101, 174, 202),
+    1px 5px 1px rgb(101, 174, 202), 1px 6px 1px rgb(101, 174, 202),
+    1px 7px 1px rgb(101, 174, 202), 1px 8px 1px rgb(101, 174, 202),
+    1px 9px 1px rgb(101, 174, 202), 1px 10px 1px rgb(101, 174, 202),
+    1px 18px 6px rgb(127, 216, 191), 1px 22px 10px rgb(127, 216, 171),
+    1px 25px 35px rgb(127, 216, 171), 1px 30px 60px rgb(127, 216, 191);
+}
+
+.SPP_sim_prod_body {
+  display: grid;
+  margin: auto;
+  width: 80%;
+  background-color: rgb(183, 233, 219);
+  height: 75vh;
+}
+
+.SPP_footer {
+  height: 10vh;
+  background-color: rgb(32, 189, 144);
+}

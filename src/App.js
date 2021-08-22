@@ -2,13 +2,14 @@ import { Provider } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import EcommerceLandingPage from './components/landingPage/EcommerceLandingPage';
-// import ProductCart from './components/cart/ProductCart';
 import ProductCart from './components/cart/ProductCart';
+// import ProductCart from './components/cartNew/cart/ProductCart';
 import ProductDetails from './components/ProductDetails';
 import store from './redux/store';
 import Navbar from './components/commonComponents/header/Navbar';
 import Footer from './components/commonComponents/footer/Footer';
 import ProductCategory from './components/productCategory/ProductCategory';
+import ImageCarousel from './components/singleProduct/SingleProductPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           </Route>
           <Route exact path='/productDetails/:id'>
             <ProductDetails />
+            {/* <ImageCarousel /> */}
           </Route>
         </Switch>
       </Provider>
