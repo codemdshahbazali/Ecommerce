@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import './Navbar.css';
 
 function Navbar() {
@@ -10,6 +12,8 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
+
+  const cartData = useSelector((state) => state.cartData);
 
   return (
     <div className='navbar-parent-container'>
@@ -90,6 +94,7 @@ function Navbar() {
               className='nav-links nav-link-cart'
               onClick={click ? handleClick : null}>
               <i class='bi bi-cart-check-fill'></i>
+              <span className='product-cart-item-count'>{cartData.length}</span>
             </NavLink>
           </div>
         </div>
