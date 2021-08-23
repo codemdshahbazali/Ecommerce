@@ -16,7 +16,7 @@ function ProductCategory() {
     dispatch(getProductCategoryData({ category }));
   }, [dispatch, category]);
 
-  const { loading, productCategoryData, errorMessage } = useSelector(
+  const { loading, productCategoryData } = useSelector(
     (state) => state.categoryProductData
   );
   return (

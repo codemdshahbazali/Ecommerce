@@ -106,10 +106,34 @@ const Footer = () => {
                     Team Solutions
                   </h3>
                   <div className='f_social_icon'>
-                    <a href='/' className='fab fa-facebook'></a>
-                    <a href='/' className='fab fa-twitter'></a>
-                    <a href='/' className='fab fa-linkedin'></a>
-                    <a href='/' className='fab fa-pinterest'></a>
+                    <a
+                      href='https://www.facebook.com/mdshahbaz1/'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='fab fa-facebook'>
+                      {' '}
+                    </a>
+                    <a
+                      href='https://twitter.com/alishahbaz4u'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='fab fa-twitter'>
+                      {' '}
+                    </a>
+                    <a
+                      href='https://www.linkedin.com/in/md-shahbaz-ali-03238645/'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='fab fa-linkedin'>
+                      {' '}
+                    </a>
+                    <a
+                      href='https://www.instagram.com/mdshahbaz1/'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='fab fa-instagram'>
+                      {' '}
+                    </a>
                   </div>
                 </div>
               </div>
