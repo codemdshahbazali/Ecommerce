@@ -20,7 +20,8 @@ const categoryGetAllProductSlice = createSlice({
     },
     [getProductCategoryData.rejected]: (state) => {
       state.loading = false;
-      state.errorMessage = 'Something went wrong fetching product categpry';
+      state.errorMessage =
+        'Something went wrong while fetching product categpry. Please Refresh';
     },
   },
 });
