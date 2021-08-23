@@ -1,10 +1,11 @@
 // let { BrowserRouter, Switch, Route, NavLink } = ReactRouterDOM;
 
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+  const history = useHistory();
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -15,7 +16,11 @@ function Navbar() {
       <div className={click ? 'main-container' : ''} onClick={() => Close()} />
       <nav className='navbar' onClick={(e) => e.stopPropagation()}>
         <div className='nav-container'>
-          <div className='nav-logo'>
+          <div
+            className='nav-logo'
+            onClick={() => {
+              history.push('/');
+            }}>
             <img
               src='/assets/images/logo.png'
               className='logo-img'

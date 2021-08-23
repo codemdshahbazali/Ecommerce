@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateCart, removeFromCart } from './../../redux/slices/CartSlice';
-import './cartitem.css';
+
 function CartItem({ data }) {
   const dispatch = useDispatch();
   const [productQuant, setProductQuant] = useState(data.productQuantity);
@@ -13,20 +13,12 @@ function CartItem({ data }) {
 
   return (
     <div className='container product-cart-item'>
-      <button
-        className='btn-cart btn'
-        onClick={() => {
-          dispatch(removeFromCart(data.id));
-        }}>
-        ❌
-      </button>
-
-      <div className='row'>
-        <div className='col-4 product-cart-img '>
+      <div className='row product-cart-item-row'>
+        <div className='col-md-4 col-sm-10 product-cart-img'>
           <img src={data.image} alt={data.title} />
         </div>
-        <div className='col-2'></div>
-        <div className='col-6 product-cart-info'>
+        <div className='col-md-1'></div>
+        <div className='col-md-6 col-sm-10 product-cart-info'>
           <p className='product-cart-info-title'>{data.title}</p>
           <p
             className='product-cart-info-desc'
@@ -41,23 +33,30 @@ function CartItem({ data }) {
           </p>
           <div className='product-quantity mb-2'>
             <button
-              className='btn btn-outline-secondary  ps-3 r-btn'
+              className='btn btn-outline-secondary fs-5 ps-3 pe-3'
               onClick={() => {
                 setProductQuant((prevData) => prevData - 1);
               }}>
-              ◀
+              -
             </button>
-            <button className='btn btn-outline-secondary  ps-3  m-1'>
+            <button className='btn btn-outline-secondary fs-5 ps-4 pe-4 m-1'>
               {productQuant > 0 ? productQuant : setProductQuant(1)}
             </button>
             <button
-              className='btn btn-outline-secondary ps-3 mb  r-btn'
+              className='btn btn-outline-secondary fs-5 ps-3 pe-3'
               onClick={() => {
                 setProductQuant((prevData) => prevData + 1);
               }}>
-              ▶
+              +
             </button>
           </div>
+          <button
+            className='btn btn-danger remove-cart-btn'
+            onClick={() => {
+              dispatch(removeFromCart(data.id));
+            }}>
+            Remove Item
+          </button>
         </div>
       </div>
     </div>

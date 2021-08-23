@@ -80,7 +80,7 @@
   height: 360px;
   object-fit: contain;
 }
-
+/* CSS for product cart */
 .product-cart {
   color: rgb(255, 255, 255);
   width: 50px;
@@ -99,6 +99,7 @@
 
 .product-cart-img {
   text-align: center;
+  align-self: center;
 }
 
 .product-cart-img > img {
@@ -139,6 +140,7 @@
 .subtotal-card {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 15px;
   height: 120px;
   font-size: 1rem !important;
   font-weight: 500;
@@ -146,6 +148,9 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .section-header {
@@ -161,4 +166,31 @@
   transition: width 0.7s ease, background-color 0.5s ease;
   margin: 0 auto;
   border: 0.7px solid rgb(226, 219, 219);
+}
+
+.product-cart-orderlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 14px !important;
+  }
+
+  .subtotal-card {
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  .product-cart-orderlist {
+    order: 2;
+  }
+
+  .product-cart-item-row {
+    justify-content: center;
+    align-items: center;
+  }
 }

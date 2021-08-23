@@ -9,7 +9,6 @@ import store from './redux/store';
 import Navbar from './components/commonComponents/header/Navbar';
 import Footer from './components/commonComponents/footer/Footer';
 import ProductCategory from './components/productCategory/ProductCategory';
-import ImageCarousel from './components/singleProduct/SingleProductPage';
 
 function App() {
   return (
