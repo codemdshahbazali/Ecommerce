@@ -51,25 +51,16 @@ const Footer = () => {
                     animationDelay: ' 0.4s',
                     animationName: 'fadeInLeft',
                   }}>
-                  <h3 className='f-title f_600 t_color f_size_18'>Download</h3>
+                  <h3 className='f-title f_600 t_color f_size_18'>Enigma</h3>
                   <ul className='list-unstyled f_list'>
                     <li>
-                      <a href='/'>Company</a>
+                      <a href='/'>Home</a>
                     </li>
                     <li>
-                      <a href='/'>Android App</a>
+                      <a href='/'>Category</a>
                     </li>
                     <li>
-                      <a href='/'>ios App</a>
-                    </li>
-                    <li>
-                      <a href='/'>Desktop</a>
-                    </li>
-                    <li>
-                      <a href='/'>Projects</a>
-                    </li>
-                    <li>
-                      <a href='/'>My tasks</a>
+                      <a href='/'>Testimonial</a>
                     </li>
                   </ul>
                 </div>
@@ -83,25 +74,21 @@ const Footer = () => {
                     animationDelay: '0.6s',
                     animatioName: 'fadeInLeft',
                   }}>
-                  <h3 className='f-title f_600 t_color f_size_18'>Help</h3>
+                  <h3 className='f-title f_600 t_color f_size_18'>
+                    Categories
+                  </h3>
                   <ul className='list-unstyled f_list'>
                     <li>
-                      <a href='/'>FAQ</a>
+                      <a href='/'>Electronics</a>
                     </li>
                     <li>
-                      <a href='/'>Term &amp; conditions</a>
+                      <a href='/'>Men's Wear</a>
                     </li>
                     <li>
-                      <a href='/'>Reporting</a>
+                      <a href='/'>Women's Wear</a>
                     </li>
                     <li>
-                      <a href='/'>Documentation</a>
-                    </li>
-                    <li>
-                      <a href='/'>Support Policy</a>
-                    </li>
-                    <li>
-                      <a href='/'>Privacy</a>
+                      <a href='/'>Jewellery</a>
                     </li>
                   </ul>
                 </div>
