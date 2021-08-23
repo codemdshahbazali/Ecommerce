@@ -19,26 +19,24 @@
 }
 
 .rabbit .r-productcart-mainDiv .subtotal {
-  /* position: fixed;
+  position: fixed;
   bottom: 10vh;
-  right: 45vw; */
-  font-size: 2rem;
+  right: 45vw;
+  font-size: 1rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 900;
-  /* text-decoration: underline; */
-  text-align: center;
+  text-decoration: underline;
   font-variant: small-caps;
   text-transform: uppercase;
   color: rgb(6, 10, 6);
-  margin-bottom: 120px;
 }
 
 .rabbit .r-productcart-mainDiv .cart-detail {
   margin: 1vh;
 }
 
-@media only screen and (min-device-width: 620px) {
+@media only screen and (max-device-width: 620px) {
   .rabbit .r-productcart-mainDiv {
     display: flex;
     justify-content: center;

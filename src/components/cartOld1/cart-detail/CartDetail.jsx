@@ -16,37 +16,37 @@ const CartDetail = () => {
           <div className="form-group">
             <input
               type="street"
-              className="form-control field4"
+              className="form-control"
               id="autocomplete"
               placeholder="Street"
             />
 
             <input
               type="city"
-              className="form-control field4"
+              className="form-control"
               id="inputCity"
               placeholder="City"
             />
 
             <input
               type="zip"
-              className="form-control field4"
+              className="form-control"
               id="inputZip"
               placeholder="Zip"
             />
 
             <input
               type="state"
-              className="form-control field4"
+              className="form-control"
               id="inputState"
               placeholder="State"
             />
 
             <input
               type="county"
-              className="form-control field4"
+              className="form-control"
               id="inputCounty"
-              placeholder="Country"
+              placeholder="County"
             />
           </div>
         </div>
@@ -62,12 +62,12 @@ const CartDetail = () => {
             {/* <!-- Card Number --> */}
             <input
               type="integer"
-              className="card-number payment-styling field4"
+              className="card-number payment-styling"
               placeholder="Card Number"
             />
             <input
               type="text"
-              class="card-owner payment-styling field4"
+              class="card-owner payment-styling"
               placeholder="Card Owner"
             />
             {/* <!-- Date Field --> */}
