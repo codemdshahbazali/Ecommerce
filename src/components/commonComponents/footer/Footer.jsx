@@ -110,29 +110,33 @@ const Footer = () => {
                       href='https://www.facebook.com/mdshahbaz1/'
                       target='_blank'
                       rel='noreferrer'
-                      className='fab fa-facebook'>
-                      {' '}
+                      className='fab fa-facebook'
+                      style={{ textDecoration: 'none' }}>
+                      .
                     </a>
                     <a
                       href='https://twitter.com/alishahbaz4u'
                       target='_blank'
                       rel='noreferrer'
-                      className='fab fa-twitter'>
-                      {' '}
+                      className='fab fa-twitter'
+                      style={{ textDecoration: 'none' }}>
+                      .
                     </a>
                     <a
                       href='https://www.linkedin.com/in/md-shahbaz-ali-03238645/'
                       target='_blank'
                       rel='noreferrer'
-                      className='fab fa-linkedin'>
-                      {' '}
+                      className='fab fa-linkedin'
+                      style={{ textDecoration: 'none' }}>
+                      .
                     </a>
                     <a
                       href='https://www.instagram.com/mdshahbaz1/'
                       target='_blank'
                       rel='noreferrer'
-                      className='fab fa-instagram'>
-                      {' '}
+                      className='fab fa-instagram'
+                      style={{ textDecoration: 'none' }}>
+                      .
                     </a>
                   </div>
                 </div>
@@ -144,18 +148,6 @@ const Footer = () => {
             <div className='footer_bg_two'></div>
           </div>
         </div>
-        {/* <div className="footer_bottom">
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-6 col-sm-7">
-                        <p className="mb-0 f_400">© cakecounter Inc.. 2019 All rights reserved.</p>
-                    </div>
-                    <div className="col-lg-6 col-sm-5 text-right">
-                        <p>Made with <i className="icon_heart"></i> in <a href="#">CakeCounter</a></p>
-                    </div>
-                </div>
-            </div>
-        </div> */}
       </footer>
     </div>
   );
