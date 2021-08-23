@@ -26,10 +26,11 @@ function App() {
           </Route>
           <Route exact path='/category/:category'>
             <ProductCategory />
+            <Footer />
           </Route>
           <Route exact path='/productDetails/:id'>
             <ProductDetails />
-            {/* <ImageCarousel /> */}
+            <Footer />
           </Route>
         </Switch>
       </Provider>

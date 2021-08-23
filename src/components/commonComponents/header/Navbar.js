@@ -15,6 +15,13 @@ function Navbar() {
       <div className={click ? 'main-container' : ''} onClick={() => Close()} />
       <nav className='navbar' onClick={(e) => e.stopPropagation()}>
         <div className='nav-container'>
+          <div className='nav-logo'>
+            <img
+              src='/assets/images/logo.png'
+              className='logo-img'
+              alt='logo'
+            />
+          </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <NavLink
@@ -66,19 +73,19 @@ function Navbar() {
                 Jewellery
               </NavLink>
             </li>
-            <li className='nav-item' style={{ fontSize: '30px' }}>
-              <NavLink
-                exact
-                to='/cart'
-                activeClassName='active'
-                className='nav-links'
-                onClick={click ? handleClick : null}>
-                <i class='bi bi-cart-check-fill'></i>
-              </NavLink>
-            </li>
           </ul>
           <div className='nav-icon' onClick={handleClick}>
             <i className={click ? 'fa fa-times' : 'fa fa-bars'}></i>
+          </div>
+          <div className='nav-item nav-item-cart' style={{ fontSize: '30px' }}>
+            <NavLink
+              exact
+              to='/cart'
+              activeClassName='active'
+              className='nav-links nav-link-cart'
+              onClick={click ? handleClick : null}>
+              <i class='bi bi-cart-check-fill'></i>
+            </NavLink>
           </div>
         </div>
       </nav>

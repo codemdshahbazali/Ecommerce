@@ -79,16 +79,16 @@ const Footer = () => {
                   </h3>
                   <ul className='list-unstyled f_list'>
                     <li>
-                      <a href='/'>Electronics</a>
+                      <a href='/category/electronics'>Electronics</a>
                     </li>
                     <li>
-                      <a href='/'>Men's Wear</a>
+                      <a href="/category/men's clothing">Men's Wear</a>
                     </li>
                     <li>
-                      <a href='/'>Women's Wear</a>
+                      <a href="/category/women's clothing">Women's Wear</a>
                     </li>
                     <li>
-                      <a href='/'>Jewellery</a>
+                      <a href='/category/jewelery'>Jewellery</a>
                     </li>
                   </ul>
                 </div>

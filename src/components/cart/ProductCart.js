@@ -1,35 +1,37 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import CartItem from './CartItem';
+import React from "react";
+import { useSelector } from "react-redux";
+import CartItem from "./CartItem";
+import CartDetail from "./cart-detail/CartDetail";
+import "./productcart.css";
 
 function ProductCart() {
   const cartData = useSelector((state) => state.cartData);
   return (
-    <div style={{ position: 'relative', top: '70px' }}>
-      <div className='container-fluid mt-4'>
-        <div className='row'>
-          <div className='col-1'></div>
-          <div className='col-8'>
+    <div className="rabbit ">
+      <div className="r-productcart-mainDiv">
+        <div className="productlisting">
+          {cartData
+            .map((data, index) => {
+              return <CartItem data={data} key={index} />;
+            })
+            .reverse()}
+        </div>
+        <div className="subtotal">
+          <span>Subtotal: ({cartData.length} items): ₹ </span>
+          <span>
             {cartData
-              .map((data, index) => {
-                return <CartItem data={data} key={index} />;
-              })
-              .reverse()}
-          </div>
-          <div className='col-2 subtotal-card'>
-            <span>Subtotal: ({cartData.length} items): ₹ </span>
-            <span>
-              {cartData
-                .reduce(
-                  (accumulator, currentValue) =>
-                    accumulator +
-                    Number(currentValue.price) *
-                      Number(currentValue.productQuantity),
-                  0
-                )
-                .toFixed(2)}
-            </span>
-          </div>
+              .reduce(
+                (accumulator, currentValue) =>
+                  accumulator +
+                  Number(currentValue.price) *
+                    Number(currentValue.productQuantity),
+                0
+              )
+              .toFixed(2)}
+          </span>
+        </div>
+        <div className="cart-detail">
+          <CartDetail />
         </div>
       </div>
     </div>

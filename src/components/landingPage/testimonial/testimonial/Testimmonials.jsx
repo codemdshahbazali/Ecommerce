@@ -36,14 +36,14 @@ const Testimonials = () => {
                   <img src='https://i.ibb.co/d5DY64w/img1.jpg' alt='' />
                 </div>
                 <p className='testimonial'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  eu sem tempor, varius quam at, luctus dui. Mauris magna metus,
-                  dapibus nec turpis vel, semper malesuada ante. Idac bibendum
-                  scelerisque non non purus. Suspendisse varius nibh non
-                  aliquet.
+                  This website is really super cool. It fulfilled my shopping
+                  worries. I get best products at cheap price from here. I find
+                  it difficult at time to get proper sizes of shoes for me I
+                  found it here. Thank you for creating such a wonderful
+                  shopping website
                 </p>
                 <p className='overview'>
-                  <b>Jennifer Smith</b>, Office Worker
+                  <b>Jennifer Smith</b>, Certified User
                 </p>
               </div>
               <div className='item carousel-item'>
@@ -51,14 +51,14 @@ const Testimonials = () => {
                   <img src='https://i.ibb.co/5FF1vqz/img2.jpg' alt='' />
                 </div>
                 <p className='testimonial'>
-                  Vestibulum quis quam ut magna consequat faucibus. Pellentesque
-                  eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus.
-                  Pellentesque viverra sagittis quam at mattis. Suspendisse
-                  potenti. Aliquam sit amet gravida nibh, facilisis gravida
-                  odio.
+                  I used to browse through the internet to find best dresses for
+                  me and i was so much confused with the products which was best
+                  for me but your website has helped me in my shopping, I will
+                  highly recommend purchasing from here. The products are well
+                  organised in categories.
                 </p>
                 <p className='overview'>
-                  <b>Dauglas McNun</b>, Financial Advisor
+                  <b>Dauglas McNun</b>, Certified User
                 </p>
               </div>
               <div className='item carousel-item'>
@@ -66,14 +66,14 @@ const Testimonials = () => {
                   <img src='https://i.ibb.co/Trv7hDv/img3.jpg' alt='' />
                 </div>
                 <p className='testimonial'>
-                  Phasellus vitae suscipit justo. Mauris pharetra feugiat ante
-                  id lacinia. Etiam faucibus mauris id tempor egestas. Duis
-                  luctus turpis at accumsan tincidunt. Phasellus risus risus,
-                  volutpat vel tellus ac, tincidunt fringilla massa. Etiam
-                  hendrerit dolor eget rutrum.
+                  Jewellery are generally expensive and need to be spent wisely.
+                  I took a risk buying from you and what i saw surprised me. The
+                  products are so elegant and the quality i recieved at that
+                  cost in unimaginable. I will surely look forward buying from
+                  products from you
                 </p>
                 <p className='overview'>
-                  <b>Hellen Wright</b>, Athelete
+                  <b>Hellen Wright</b>, Certified User
                 </p>
               </div>
             </div>

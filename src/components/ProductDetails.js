@@ -23,7 +23,7 @@ function ProductDetails() {
   return (
     <div
       className='container-fluid mt-4'
-      style={{ position: 'relative', top: '70px' }}>
+      style={{ position: 'relative', top: '70px', marginBottom: '100px' }}>
       {loading ? (
         <div className='d-flex justify-content-center'>
           <div className='spinner-border' role='status'>
