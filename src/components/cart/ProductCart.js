@@ -24,7 +24,15 @@ function ProductCart() {
           </div>
           <div className='col-lg-3 col-md-8 col-10 subtotal-card'>
             <div>
-              <span>Subtotal: ({cartData.length} items): ₹ </span>
+              <span>
+                Subtotal: (
+                {cartData.reduce(
+                  (accumulator, currentValue) =>
+                    accumulator + Number(currentValue.productQuantity),
+                  0
+                )}{' '}
+                items): ₹{' '}
+              </span>
               <span>
                 {cartData
                   .reduce(
