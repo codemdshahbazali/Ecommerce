@@ -42,7 +42,7 @@ function EcommerceLandingPage() {
           <h2
             className='section-header'
             style={{ textAlign: 'center', marginTop: '30px' }}>
-            Categories we offer
+            CATEGORIES WE OFFER
           </h2>
           <div className='container-fluid product-container'>
             {categories && <Category categories={categories} />}

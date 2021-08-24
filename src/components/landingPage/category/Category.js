@@ -31,6 +31,7 @@ function Category(props) {
         disableArrowsOnEnd={false}
         showArrows={windowDimensions > 600 ? true : false}
         itemPadding={[2, 2, 2, 2]}
+        focusOnSelect={true}
         outerSpacing={3}>
         {props.categories?.map((element, index) => (
           <CategoryItem category={element} key={index} />
