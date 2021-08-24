@@ -1,5 +1,5 @@
 .App {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .product-listing {
   font-weight: 600;
