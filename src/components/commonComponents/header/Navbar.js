@@ -93,7 +93,7 @@ function Navbar() {
               activeClassName='active'
               className='nav-links nav-link-cart'
               onClick={click ? handleClick : null}>
-              <i class='bi bi-cart-check-fill'></i>
+              <i className='bi bi-cart-check-fill'></i>
               <span className='product-cart-item-count'>{cartData.length}</span>
             </NavLink>
           </div>

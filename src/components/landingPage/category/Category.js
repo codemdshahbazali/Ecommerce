@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CategoryItem from './CategoryItem';
 import './Category.css';
 import Carousel from 'react-elastic-carousel';
@@ -11,13 +11,25 @@ const breakPoints = [
 ];
 
 function Category(props) {
+  const [windowDimensions, setWindowDimensions] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  console.log('Windows Object', window.innerWidth);
   return (
     <div className='honmepage--category'>
       <Carousel
         showEmptySlots={true}
         breakPoints={breakPoints}
-        showArrows={true}
         disableArrowsOnEnd={false}
+        showArrows={windowDimensions > 600 ? true : false}
         itemPadding={[2, 2, 2, 2]}
         outerSpacing={3}>
         {props.categories?.map((element, index) => (
