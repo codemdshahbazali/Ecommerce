@@ -175,6 +175,11 @@
   flex-direction: column;
 }
 
+.product-details-card-row {
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 992px) {
   html {
     font-size: 14px !important;
@@ -192,6 +197,14 @@
   .product-cart-item-row {
     justify-content: center;
     align-items: center;
+  }
+
+  .product-card-info-toolkit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px !important;
   }
 }
 

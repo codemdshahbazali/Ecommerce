@@ -32,14 +32,14 @@ function ProductDetails() {
         </div>
       ) : !errorMessage ? (
         <>
-          <div className='row align-items-center'>
-            <div className='col-6 product-card-img-toolkit text-center'>
+          <div className='row product-details-card-row'>
+            <div className='col-lg-6 col-10 product-card-img-toolkit text-center'>
               <img
                 src={individualProduct?.image}
                 alt={individualProduct?.title}
               />
             </div>
-            <div className='col-4 product-card-info-toolkit'>
+            <div className='col-lg-4 col-10 product-card-info-toolkit'>
               <p className='product-card-info-title-toolkit h4'>
                 {individualProduct?.title}
               </p>
