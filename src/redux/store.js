@@ -1,4 +1,4 @@
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './slices';
 
 import throttle from 'lodash.throttle';
@@ -15,8 +15,6 @@ const store = configureStore({
 
 // We'll subscribe to state changes, saving the store's state to the browser's
 // local storage. We'll throttle this to prevent excessive work.
-store.subscribe(
-	throttle( () => saveState(store.getState()), 1000)
-);
+store.subscribe(throttle(() => saveState(store.getState()), 1000));
 
 export default store;
