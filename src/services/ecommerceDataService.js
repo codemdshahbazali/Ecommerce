@@ -6,7 +6,6 @@ export const getEcommerceData = createAsyncThunk(
     try {
       const response = await fetch('https://fakestoreapi.com/products');
       const data = await response.json();
-      console.log(data);
       return data;
     } catch (e) {
       throw new Error(e.message);

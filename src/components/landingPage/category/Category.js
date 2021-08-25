@@ -22,7 +22,6 @@ function Category(props) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  console.log('Windows Object', window.innerWidth);
   return (
     <div className='honmepage--category'>
       <Carousel

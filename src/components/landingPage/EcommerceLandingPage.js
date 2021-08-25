@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getEcommerceData } from './../../services/ecommerceDataService';
+// import { getEcommerceData } from './../../services/ecommerceDataService';
 import Crousel from './crousel/Crousel';
 import Category from './category/Category';
 import CategoryOverview from './categoryOverview/CategoryOverview';
@@ -10,7 +10,7 @@ import Testimonials from './testimonial/testimonial/Testimmonials';
 
 function EcommerceLandingPage() {
   const [categories, setCategories] = useState(null);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { productCategory } = useSelector((state) => state.categoryProductData);
 
   useEffect(() => {
@@ -24,9 +24,9 @@ function EcommerceLandingPage() {
       });
   }, []);
 
-  useEffect(() => {
-    dispatch(getEcommerceData());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getEcommerceData());
+  // }, [dispatch]);
 
   return (
     <div>
