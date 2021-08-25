@@ -160,17 +160,21 @@
 
 .section-header {
   color: rgb(95, 91, 91);
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .section-header:after {
   content: '';
   display: block;
-  height: 0;
-  width: 400px;
-  background: transparent;
-  transition: width 0.7s ease, background-color 0.5s ease;
-  margin: 0 auto;
-  border: 0.7px solid rgb(226, 219, 219);
+  height: 3px;
+  width: 80%;
+  background: #cfafac;
+  margin: 5px auto;
+  border: 0.7px solid #cfafac;
+  opacity: 0.8;
 }
 
 .product-cart-orderlist {
