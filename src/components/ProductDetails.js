@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function ProductDetails() {
   const dispatch = useDispatch();
-  const { id } = useParams();
+  const id = useParams();
 
   useEffect(() => dispatch(getProductData({ id })), [dispatch, id]);
 

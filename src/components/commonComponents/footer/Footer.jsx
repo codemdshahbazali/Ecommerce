@@ -1,12 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './footer.css';
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{ overflow: 'hidden' }}>
       <footer className='new_footer_area bg_color'>
         <div className='new_footer_top'>
-          <div className='container'>
+          <div className='container' style={{ height: '330px' }}>
             <div className='row'>
               <div className='col-lg-3 col-md-6'>
                 <div
@@ -20,9 +21,7 @@ const Footer = () => {
                   <h3 className='f-title f_600 t_color f_size_18'>
                     Get in Touch
                   </h3>
-                  <p>
-                    Don’t miss any updates of our new templates and extensions.!
-                  </p>
+                  <p>Don’t miss any updates of our new products.!</p>
                   <form className='f_subscribe_two mailchimp'>
                     <input
                       type='text'
@@ -54,13 +53,13 @@ const Footer = () => {
                   <h3 className='f-title f_600 t_color f_size_18'>Enigma</h3>
                   <ul className='list-unstyled f_list'>
                     <li>
-                      <a href='/'>Home</a>
+                      <NavLink to='/'>Home</NavLink>
                     </li>
                     <li>
-                      <a href='/'>Category</a>
+                      <NavLink to='/'>Category</NavLink>
                     </li>
                     <li>
-                      <a href='/'>Testimonial</a>
+                      <NavLink to='/'>Testimonial</NavLink>
                     </li>
                   </ul>
                 </div>
@@ -79,16 +78,20 @@ const Footer = () => {
                   </h3>
                   <ul className='list-unstyled f_list'>
                     <li>
-                      <a href='/category/electronics'>Electronics</a>
+                      <NavLink to='/category/electronics'>Electronics</NavLink>
                     </li>
                     <li>
-                      <a href="/category/men's clothing">Men's Wear</a>
+                      <NavLink to='/category/jewelery'>Jewellery</NavLink>
                     </li>
                     <li>
-                      <a href="/category/women's clothing">Women's Wear</a>
+                      <NavLink to="/category/men's clothing">
+                        Men's Wear
+                      </NavLink>
                     </li>
                     <li>
-                      <a href='/category/jewelery'>Jewellery</a>
+                      <NavLink to="/category/women's clothing">
+                        Women's Wear
+                      </NavLink>
                     </li>
                   </ul>
                 </div>

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
 
 function ProductCart() {
   const cartData = useSelector((state) => state.cartData);
+
+  useEffect(() => {
+    document.getElementsByClassName('App')[0].style.overflow = 'inherit';
+    return () => {
+      document.getElementsByClassName('App')[0].style.overflow = 'hidden';
+    };
+  }, []);
+
   return (
     <div style={{ position: 'relative', top: '70px' }}>
       <div className='container-fluid mt-4'>
@@ -17,7 +25,7 @@ function ProductCart() {
                 })
                 .reverse()
             ) : (
-              <h2 className='text-center'>
+              <h2 className='text-center' style={{ height: '200px' }}>
                 No Items in the cart. Please add item to purchase
               </h2>
             )}
