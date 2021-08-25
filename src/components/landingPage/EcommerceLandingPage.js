@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-// import { getEcommerceData } from './../../services/ecommerceDataService';
+import { useSelector } from 'react-redux';
 import Crousel from './crousel/Crousel';
 import Category from './category/Category';
 import CategoryOverview from './categoryOverview/CategoryOverview';
 import Testimonials from './testimonial/testimonial/Testimmonials';
-// import Testimonials from './testimonials/testimmonials';
 
 function EcommerceLandingPage() {
   const [categories, setCategories] = useState(null);
-  // const dispatch = useDispatch();
   const { productCategory } = useSelector((state) => state.categoryProductData);
 
   useEffect(() => {
@@ -23,10 +20,6 @@ function EcommerceLandingPage() {
         setCategories(data);
       });
   }, []);
-
-  // useEffect(() => {
-  //   dispatch(getEcommerceData());
-  // }, [dispatch]);
 
   return (
     <div>
