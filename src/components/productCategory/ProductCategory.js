@@ -19,6 +19,7 @@ function ProductCategory() {
   const { loading, productCategoryData } = useSelector(
     (state) => state.categoryProductData
   );
+
   return (
     <div
       className='container1'

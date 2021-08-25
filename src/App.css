@@ -104,6 +104,7 @@
 .product-cart-img {
   text-align: center;
   align-self: center;
+  cursor: pointer;
 }
 
 .product-cart-img > img {

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { updateCart, removeFromCart } from './../../redux/slices/CartSlice';
 
 function CartItem({ data }) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [productQuant, setProductQuant] = useState(data.productQuantity);
 
   useEffect(() => {
@@ -14,7 +16,11 @@ function CartItem({ data }) {
   return (
     <div className='container product-cart-item'>
       <div className='row product-cart-item-row'>
-        <div className='col-md-4 col-sm-10 product-cart-img'>
+        <div
+          className='col-md-4 col-sm-10 product-cart-img'
+          onClick={() => {
+            history.push(`/productDetails/${data.id}`);
+          }}>
           <img src={data.image} alt={data.title} />
         </div>
         <div className='col-md-1'></div>
