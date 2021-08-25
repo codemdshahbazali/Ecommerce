@@ -17,6 +17,7 @@ const categoryGetAllProductSlice = createSlice({
       state.loading = false;
       state.productCategoryData = action.payload.data;
       state.productCategory = action.payload.category;
+      state.errorMessage = null;
     },
     [getProductCategoryData.rejected]: (state) => {
       state.loading = false;

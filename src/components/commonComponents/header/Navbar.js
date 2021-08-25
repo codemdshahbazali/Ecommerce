@@ -94,7 +94,13 @@ function Navbar() {
               className='nav-links nav-link-cart'
               onClick={click ? handleClick : null}>
               <i className='bi bi-cart-check-fill'></i>
-              <span className='product-cart-item-count'>{cartData.length}</span>
+              <span className='product-cart-item-count'>
+                {cartData.reduce(
+                  (accumulator, currentValue) =>
+                    accumulator + Number(currentValue.productQuantity),
+                  0
+                )}
+              </span>
             </NavLink>
           </div>
         </div>

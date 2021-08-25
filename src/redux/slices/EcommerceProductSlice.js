@@ -20,6 +20,7 @@ const ecommerceProductDataSlice = createSlice({
       .addCase(getEcommerceData.fulfilled, (state, action) => {
         state.loading = false;
         state.productData = action.payload;
+        state.errorMessage = null;
       });
     // [getEcommerceData.pending]: (state) => {
     //   state.loading = true;

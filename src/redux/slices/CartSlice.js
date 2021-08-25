@@ -9,7 +9,6 @@ const cartSlice = createSlice({
         return data.id !== action.payload.id;
       });
 
-      console.log(findBol);
       if (findBol) {
         state.push(action.payload);
       } else {

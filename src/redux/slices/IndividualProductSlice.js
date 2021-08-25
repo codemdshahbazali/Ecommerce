@@ -16,10 +16,12 @@ const individualProductDataSlice = createSlice({
       .addCase(getProductData.fulfilled, (state, action) => {
         state.loading = false;
         state.individualProduct = action.payload;
+        state.errorMessage = null;
       })
       .addCase(getProductData.rejected, (state) => {
         state.loading = false;
-        state.errorMessage = 'Something went wrong';
+        state.errorMessage =
+          'Something went wrong while fetching individual data. Please refresh!!!';
       });
   },
 });
